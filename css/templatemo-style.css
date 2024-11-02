@@ -351,18 +351,40 @@ p {
 }
 
 @media (max-width: 768px) {
+  /* Make the brand container fixed at the top */
   .tm-brand-container-outer {
-    margin-top: 0 !important;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it stays on top */
     padding: 1rem 0;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Add a background color for visibility */
   }
 
+  /* Adjust brand name font size to fit smaller screens */
   .tm-brand-name {
-    font-size: 8vw; /* Scales the text size based on viewport width */
+    font-size: 6vw;
     line-height: 1.2;
+    margin: 0;
   }
 
+  /* Adjust margin-top for welcome container to avoid overlap */
   .tm-welcome-container {
-    padding-top: 2rem; /* Space between name and history section */
+    margin-top: 120px; /* Set this to the height of the brand container */
+    padding-top: 1rem;
+  }
+
+  /* Ensure welcome-left section stacks properly */
+  .tm-welcome-left,
+  .tm-welcome-right,
+  #tmPortfolio,
+  #tmContact {
+    padding-top: 1rem;
   }
 }
