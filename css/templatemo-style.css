@@ -353,8 +353,16 @@ p {
 @media (max-width: 768px) {
   .tm-brand-container-outer {
     margin-top: 0 !important;
+    position: relative;
+    padding: 1rem 0;
   }
-  .tm-brand-container-inner {
-    padding-top: 1rem; /* Add padding to avoid text cut-off */
+
+  .tm-brand-name {
+    font-size: 8vw; /* Scales the text size based on viewport width */
+    line-height: 1.2;
+  }
+
+  .tm-welcome-container {
+    padding-top: 2rem; /* Space between name and history section */
   }
 }
