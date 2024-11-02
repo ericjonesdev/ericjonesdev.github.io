@@ -301,9 +301,15 @@
       function setBrandMarginTop() {
         const bottomContainerHeight = $(".tm-welcome-container").height();
 
-        $(".tm-brand-container-outer").css({
-          "margin-top": -bottomContainerHeight + "px",
-        });
+        if ($(window).width() > 768) {
+          $(".tm-brand-container-outer").css({
+            "margin-top": -bottomContainerHeight + "px",
+          });
+        } else {
+          $(".tm-brand-container-outer").css({
+            "margin-top": "0",
+          });
+        }
       }
 
       $(function () {
@@ -315,13 +321,10 @@
         });
       });
     </script>
-    <script>
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-      >
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("X8YgWbz7VFI948XXo"); // Correctly initializing with public key
+        emailjs.init("X8YgWbz7VFI948XXo");
       })();
 
       function sendEmail(event) {
