@@ -349,3 +349,12 @@ p {
 .tm-copyright-text p {
   color: blue;
 }
+
+@media (max-width: 768px) {
+  .tm-brand-container-outer {
+    margin-top: 0 !important;
+  }
+  .tm-brand-container-inner {
+    padding-top: 1rem; /* Add padding to avoid text cut-off */
+  }
+}
