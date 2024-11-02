@@ -266,7 +266,7 @@
             event.preventDefault();
 
             emailjs
-              .sendForm("service_gj0no07", "template_qhzlyjr", "#tmContactForm")
+              .sendForm("service_gj0no07", "template_qhzlyjr", data)
               .then(
                 function (response) {
                   alert("Message sent successfully!");
