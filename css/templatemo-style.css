@@ -380,11 +380,20 @@ p {
     padding-top: 1rem;
   }
 
-  /* Ensure welcome-left section stacks properly */
-  .tm-welcome-left,
-  .tm-welcome-right,
-  #tmPortfolio,
-  #tmContact {
-    padding-top: 1rem;
+  /* Responsive adjustments for welcome-left content */
+  .tm-welcome-left {
+    font-size: 4vw; /* Make font responsive */
+    line-height: 1.3;
+    padding: 1rem;
+  }
+
+  /* Additional responsive layout adjustments */
+  .tm-welcome-left p {
+    font-size: 3.5vw; /* Adjust paragraph text size */
+  }
+
+  .tm-welcome-title {
+    font-size: 5vw; /* Adjust title size */
+    margin-bottom: 1rem;
   }
 }
