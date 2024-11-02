@@ -268,10 +268,23 @@
         ></script>
         <script type="text/javascript">
           (function () {
-            emailjs.init({
-              publicKey: "X8YgWbz7VFI948XXo",
-            });
+            emailjs.init("X8YgWbz7VFI948XXo"); // Correctly initializing with public key
           })();
+
+          function sendEmail(event) {
+            event.preventDefault();
+
+            emailjs
+              .sendForm("service_gj0no07", "template_qhzlyjr", "#tmContactForm")
+              .then(
+                function (response) {
+                  alert("Message sent successfully!");
+                },
+                function (error) {
+                  alert("Failed to send message. Please try again later.");
+                }
+              );
+          }
         </script>
 
         <!-- Footer -->
