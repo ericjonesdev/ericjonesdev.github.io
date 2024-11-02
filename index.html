@@ -259,14 +259,14 @@
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script>
           (function () {
-            emailjs.init("-JOEwDW7oj7ga1N1X"); // Replace with your EmailJS Public API Key
+            emailjs.init("-JOEwDW7oj7ga1N1X");
           })();
 
           function sendEmail(event) {
             event.preventDefault();
 
             emailjs
-              .sendForm("service_gj0no07", "template_qhzlyjr", data)
+              .sendForm("service_gj0no07", "template_qhzlyjr", "#tmContactForm")
               .then(
                 function (response) {
                   alert("Message sent successfully!");
